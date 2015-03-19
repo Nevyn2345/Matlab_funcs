@@ -1,4 +1,4 @@
-function [ z ] = Untitled2( loc )
+function [ z ] = gauss( loc )
 %Reconstruction Image as Gaussians
 %   Detailed explanation goes here
 tic;
