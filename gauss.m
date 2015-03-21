@@ -28,10 +28,10 @@ z = zeros(imsize); %Blank image matrix
 %-----------------------------------------------------
 % Create the image
 for i=1:length(new_locx)
-    left = int16(new_locx(i)-grid_len/2+1);
-    right = int16(new_locx(i)+grid_len/2);
-    top = int16(new_locy(i)-grid_len/2+1);
-    bottom = int16(new_locy(i)+grid_len/2);
+    left = int16((new_locx(i)-grid_len/2+1)+grid_len/2);
+    right = int16((new_locx(i)+grid_len/2)+grid_len/2);
+    top = int16((new_locy(i)-grid_len/2+1)+grid_len/2);
+    bottom = int16((new_locy(i)+grid_len/2)+grid_len/2);
     z(left:right, top:bottom)=z(left:right, top:bottom)+f;
 end
 
@@ -51,4 +51,3 @@ grid on
 axis equal
 toc
 end
-
